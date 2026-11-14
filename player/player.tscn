@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bfdyfwu8s2lu7"]
 
 [ext_resource type="Script" uid="uid://vxm50drr35ye" path="res://player/player.gd" id="1_i0non"]
+[ext_resource type="PackedScene" uid="uid://c58ktyildpj73" path="res://player/ball.tscn" id="2_g1dw6"]
 [ext_resource type="Texture2D" uid="uid://cgsxgtvilf2x3" path="res://assets/player_spritesheet.png" id="2_rkbax"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_g1dw6"]
@@ -72,9 +73,9 @@ animations = [{
 radius = 17.029387
 
 [node name="Player" type="CharacterBody2D" unique_id=1749583320]
-collision_layer = 3
-collision_mask = 3
+collision_mask = 2
 script = ExtResource("1_i0non")
+ball_scene = ExtResource("2_g1dw6")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1514429302]
 scale = Vector2(0.675, 0.67499995)

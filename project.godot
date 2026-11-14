@@ -62,6 +62,13 @@ hit_ball={
 ]
 }
 
+[layer_names]
+
+2d_physics/layer_1="player_layer"
+2d_physics/layer_2="enemy_layer"
+2d_physics/layer_3="projectile_layer"
+2d_physics/layer_4="ground/wall_layer"
+
 [physics]
 
 3d/physics_engine="Jolt Physics"

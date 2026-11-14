@@ -1,6 +1,7 @@
 extends Node
 
 var player: Player
+var hud: HP_Bar
 var hp: float
 var xp: int = 0
 var xp_to_next: int = 3

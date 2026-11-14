@@ -4,6 +4,8 @@ extends CharacterBody2D
 @export var speed: float = 300.0
 @export var max_hp: float = 100.0
 
+@onready var asprite: AnimatedSprite2D = $AnimatedSprite2D
+
 var hp: float = 0.0
 var level: float = 0.0
 var xp: float = 0
@@ -17,6 +19,7 @@ ATTACK,
 }
 
 var current_state = STATES.IDLE
+var last_dir: String = "down"
 
 func _ready() -> void:
 	GameState.player = self
@@ -32,3 +35,14 @@ func _physics_process(_delta: float) -> void:
 		current_state = STATES.IDLE
 
 	move_and_slide()
+	update_animation(direction)
+
+func update_animation(direction: Vector2) -> void:
+	if direction == Vector2.ZERO:
+		asprite.play("idle_" + last_dir)
+		return
+	if abs(direction.x) > abs(direction.y):
+		last_dir = "right" if direction.x > 0 else "left"
+	else:
+		last_dir = "down" if direction.y > 0 else "up"
+	asprite.play("idle_" + last_dir) # get a walk animation at some point?

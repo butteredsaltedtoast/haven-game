@@ -14,3 +14,4 @@ position = Vector2(377, 265)
 [node name="Room" parent="." unique_id=563525661 instance=ExtResource("2_wdj6m")]
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=456058448]
+process_callback = 0

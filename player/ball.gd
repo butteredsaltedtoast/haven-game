@@ -21,3 +21,4 @@ func _on_hitbox_body_entered(body: Node2D) -> void:
 		# DAMAGE HERE IARHSDKJFKLJAFHZ
 		if enemies_hit >= GameState.max_pierces:
 			queue_free()
+		body.queue_free()

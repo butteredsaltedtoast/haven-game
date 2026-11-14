@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://bfdyfwu8s2lu7" path="res://player/player.tscn" id="3_l8qe7"]
 [ext_resource type="Script" uid="uid://gg3bmjphu6sc" path="res://levels/spawner.gd" id="4_m1504"]
 [ext_resource type="Texture2D" uid="uid://7e2chamm4afq" path="res://assets/wood_tiles.png" id="5_ifaiv"]
+[ext_resource type="PackedScene" uid="uid://cbplx788si6t8" path="res://ui/hud.tscn" id="6_5k4jt"]
 
 [node name="Main" type="Node2D" unique_id=1332508145]
 
@@ -29,3 +30,5 @@ enemies = NodePath("../Enemies")
 
 [node name="Player" parent="." unique_id=1749583320 instance=ExtResource("3_l8qe7")]
 position = Vector2(468, 237)
+
+[node name="Hud" parent="." unique_id=13673062 instance=ExtResource("6_5k4jt")]

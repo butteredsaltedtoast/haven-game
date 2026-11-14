@@ -7,7 +7,7 @@ extends CharacterBody2D
 
 @onready var asprite: AnimatedSprite2D = $AnimatedSprite2D
 
-var hp: float = 0.0
+var hp: float = 3.0
 var level: float = 0.0
 var xp: float = 0
 

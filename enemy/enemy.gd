@@ -1,3 +1,4 @@
+class_name Enemy
 extends CharacterBody2D
 
 @export var SPEED: float = 100.0

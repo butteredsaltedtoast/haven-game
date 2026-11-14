@@ -1,5 +1,5 @@
 extends Area2D
 
-func ball_kill_enemy()
-	if $Enemy
-		pass
+#func ball_kill_enemy()
+	#if $Enemy
+		#pass

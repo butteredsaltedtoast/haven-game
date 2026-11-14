@@ -1,6 +1,13 @@
+class_name Player
 extends CharacterBody2D
 
-@export var SPEED = 300.0
+@export var speed: float = 300.0
+@export var max_hp: float = 100.0
+
+var hp: float = 0.0
+var level: float = 0.0
+var xp: float = 0
+
 
 enum STATES {
 IDLE,
@@ -11,15 +18,17 @@ ATTACK,
 
 var current_state = STATES.IDLE
 
-func _physics_process(delta: float) -> void:
+func _ready() -> void:
+	GameState.player = self
+
+func _physics_process(_delta: float) -> void:
 	var direction = Input.get_vector("left", "right", "up", "down")
-	velocity = direction * SPEED
+	velocity = direction * speed
 	if direction:
 		current_state = STATES.MOVING
 	if current_state == STATES.MOVING:
-		print("moving")
+		pass
 	elif not direction:
 		current_state = STATES.IDLE
-		print("not moving")
 
 	move_and_slide()

@@ -2,10 +2,15 @@
 
 [ext_resource type="PackedScene" uid="uid://d4lafqtye8x3m" path="res://enemy/enemy.tscn" id="1_2262g"]
 [ext_resource type="PackedScene" uid="uid://dir0jgq63k00u" path="res://levels/room.tscn" id="2_wdj6m"]
+[ext_resource type="PackedScene" uid="uid://bfdyfwu8s2lu7" path="res://player/player.tscn" id="3_l8qe7"]
 
-[node name="Main" type="Node2D" unique_id=563525661]
+[node name="Main" type="Node2D" unique_id=1332508145]
+
+[node name="Player" parent="." unique_id=1749583320 instance=ExtResource("3_l8qe7")]
 
 [node name="Enemy" parent="." unique_id=735161595 instance=ExtResource("1_2262g")]
-position = Vector2(262, 211)
+position = Vector2(377, 265)
 
-[node name="Room" parent="." unique_id=1958279009 instance=ExtResource("2_wdj6m")]
+[node name="Room" parent="." unique_id=563525661 instance=ExtResource("2_wdj6m")]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=456058448]

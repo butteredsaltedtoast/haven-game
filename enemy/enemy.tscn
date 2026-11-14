@@ -104,7 +104,9 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_o33cc"]
 radius = 10.999999
 
-[node name="Enemy" type="CharacterBody2D" unique_id=735161595]
+[node name="Enemy" type="CharacterBody2D" unique_id=735161595 groups=["enemies"]]
+collision_layer = 4
+collision_mask = 7
 script = ExtResource("1_ofsxj")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1483479424]

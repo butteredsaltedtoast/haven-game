@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dir0jgq63k00u"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_o33cc"]
+<<<<<<< Updated upstream
 size = Vector2(20, 0)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_38vvf"]
@@ -11,12 +12,25 @@ size = Vector2(0, 20)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dc8xy"]
 size = Vector2(20, 0)
+=======
+size = Vector2(20, 638)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_38vvf"]
+size = Vector2(1162, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ddfx8"]
+size = Vector2(1142, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dc8xy"]
+size = Vector2(20, 618)
+>>>>>>> Stashed changes
 
 [node name="Room" type="Node2D" unique_id=563525661]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=640388811]
 
 [node name="Wall1" type="CollisionShape2D" parent="StaticBody2D" unique_id=900282028]
+<<<<<<< Updated upstream
 position = Vector2(0, -10)
 shape = SubResource("RectangleShape2D_o33cc")
 
@@ -30,4 +44,19 @@ shape = SubResource("RectangleShape2D_ddfx8")
 
 [node name="Wall4" type="CollisionShape2D" parent="StaticBody2D" unique_id=949312666]
 position = Vector2(0, 10)
+=======
+position = Vector2(0, 329)
+shape = SubResource("RectangleShape2D_o33cc")
+
+[node name="Wall2" type="CollisionShape2D" parent="StaticBody2D" unique_id=1252109939]
+position = Vector2(571, 0)
+shape = SubResource("RectangleShape2D_38vvf")
+
+[node name="Wall3" type="CollisionShape2D" parent="StaticBody2D" unique_id=1811957773]
+position = Vector2(581, 638)
+shape = SubResource("RectangleShape2D_ddfx8")
+
+[node name="Wall4" type="CollisionShape2D" parent="StaticBody2D" unique_id=949312666]
+position = Vector2(1142, 319)
+>>>>>>> Stashed changes
 shape = SubResource("RectangleShape2D_dc8xy")

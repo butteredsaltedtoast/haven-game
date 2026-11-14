@@ -3,6 +3,9 @@
 [ext_resource type="Script" uid="uid://dennirgkj6jfn" path="res://enemy/enemy.gd" id="1_ofsxj"]
 [ext_resource type="Texture2D" uid="uid://bfquvnw4ks8qb" path="res://assets/balloon_sprites.png" id="2_ofsxj"]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_o33cc"]
+radius = 10.999999
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_ww0x1"]
 atlas = ExtResource("2_ofsxj")
 region = Rect2(0, 0, 80, 80)
@@ -101,13 +104,17 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_o33cc"]
-radius = 10.999999
-
 [node name="Enemy" type="CharacterBody2D" unique_id=735161595 groups=["enemies"]]
 collision_layer = 4
 collision_mask = 7
 script = ExtResource("1_ofsxj")
+
+[node name="EnemyArea" type="Area2D" parent="." unique_id=820803025]
+
+[node name="EnemyCollisionShape" type="CollisionShape2D" parent="EnemyArea" unique_id=1454194438]
+position = Vector2(-1, -10)
+scale = Vector2(1.0000001, 1.0000001)
+shape = SubResource("CircleShape2D_o33cc")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1483479424]
 position = Vector2(0, -7.8231096e-08)

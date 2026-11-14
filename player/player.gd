@@ -57,3 +57,7 @@ func launch_ball() -> void:
 	get_tree().current_scene.add_child(ball)
 	ball.global_position = global_position
 	ball.direction = global_position.direction_to(get_global_mouse_position())
+
+func _on_player_body_entered(EnemyArea):
+	max_hp -= 5
+	print("player hurt")

@@ -12,3 +12,6 @@ func _physics_process(_delta: float) -> void:
 	var direction = global_position.direction_to(GameState.player.global_position)
 	velocity = direction * SPEED
 	move_and_slide()
+
+func _on_player_body_entered(Player):
+	pass
